@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class TowerPlace : MonoBehaviour
 {
+    private GameManagerBehaviour gameManager;
     public GameObject towerPrefab;
     private GameObject tower;
 
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
+    }
+
     private bool CanPlaceTower()
     {
-        return tower = null;
+        int cost = towerPrefab.GetComponent<TowerData>().levels[0].cost;
+        return tower == null && gameManager.Gold >= cost;
     }
 
     void OnMouseUp()
@@ -18,16 +25,17 @@ public class TowerPlace : MonoBehaviour
         {
             tower = (GameObject)
                 Instantiate(towerPrefab, transform.position, Quaternion.identity);
+            gameManager.Gold -= tower.GetComponent<TowerData>().CurrentLevel.cost;
         }
-        else if (CanUpgradeMonster())
+        else if (CanUpgradeTower())
         {
             tower.GetComponent<TowerData>().IncreaseLevel();
             AudioSource audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.PlayOneShot(audioSource.clip);
-            // TODO: Deduct gold
+            gameManager.Gold -= tower.GetComponent<TowerData>().CurrentLevel.cost;
         }
     }
-    private bool CanUpgradeMonster()
+    private bool CanUpgradeTower()
     {
         if (tower != null)
         {
@@ -35,7 +43,7 @@ public class TowerPlace : MonoBehaviour
             TowerLevel nextLevel = monsterData.GetNextLevel();
             if (nextLevel != null)
             {
-                return true;
+                return gameManager.Gold >= nextLevel.cost;
             }
         }
         return false;

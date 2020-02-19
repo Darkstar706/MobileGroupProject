@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnEnemy : MonoBehaviour
+[System.Serializable]
+public class Wave
 {
     public GameObject enemyPrefab;
     public float spawnInterval = 2;
     public int maxEnemies = 20;
 
-    public Wave[] waves;
+
+}
+
+public class SpawnEnemy : MonoBehaviour
+{
+   public Wave[] waves;
     public int timeBetweenWaves = 5;
 
     private GameManagerBehaviour gameManager;
@@ -39,7 +45,7 @@ public class SpawnEnemy : MonoBehaviour
                 lastSpawnTime = Time.time;
                 GameObject newEnemy = (GameObject)
                     Instantiate(waves[currentWave].enemyPrefab);
-                newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
+                //newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
                 enemiesSpawned++;
             }
             if (enemiesSpawned == waves[currentWave].maxEnemies &&

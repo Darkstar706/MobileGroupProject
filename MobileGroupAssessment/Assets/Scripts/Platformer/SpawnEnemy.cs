@@ -11,7 +11,7 @@ public class SpawnEnemy : MonoBehaviour
     public Wave[] waves;
     public int timeBetweenWaves = 5;
 
-    private GameManagerBehavior gameManager;
+    private GameManagerBehaviour gameManager;
 
     private float lastSpawnTime;
     private int enemiesSpawned = 0;
@@ -21,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         lastSpawnTime = Time.time;
         gameManager =
-            GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
+            GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
     }
 
     // Update is called once per frame

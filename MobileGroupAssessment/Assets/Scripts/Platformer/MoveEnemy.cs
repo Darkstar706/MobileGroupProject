@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour
 {
+    public GameObject sprite;
     public GameObject[] waypoints;
     private int currentWaypoint = 0;
     private float lastWaypointSwitchTime;

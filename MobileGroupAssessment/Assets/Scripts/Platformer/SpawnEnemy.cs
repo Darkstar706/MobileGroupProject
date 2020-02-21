@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class Wave
 {
-    public GameObject enemyPrefab;
     public float spawnInterval = 2;
     public int maxEnemies = 20;
 
@@ -14,7 +13,8 @@ public class Wave
 
 public class SpawnEnemy : MonoBehaviour
 {
-   public Wave[] waves;
+
+    public Wave[] waves;
     public int timeBetweenWaves = 5;
 
     private GameManagerBehaviour gameManager;
@@ -25,6 +25,7 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         lastSpawnTime = Time.time;
         gameManager =
             GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();

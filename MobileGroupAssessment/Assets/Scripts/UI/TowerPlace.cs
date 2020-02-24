@@ -30,8 +30,8 @@ public class TowerPlace : MonoBehaviour
         else if (CanUpgradeTower())
         {
             tower.GetComponent<TowerData>().IncreaseLevel();
-            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
-            audioSource.PlayOneShot(audioSource.clip);
+            //AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            //audioSource.PlayOneShot(audioSource.clip);
             gameManager.Gold -= tower.GetComponent<TowerData>().CurrentLevel.cost;
         }
     }

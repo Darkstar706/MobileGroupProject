@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour
 {
-    public GameObject sprite;
+    public GameObject Sprite;
     public GameObject[] waypoints;
     private int currentWaypoint = 0;
     private float lastWaypointSwitchTime;
@@ -33,6 +33,12 @@ public class MoveEnemy : MonoBehaviour
                 lastWaypointSwitchTime = Time.time;
                 RotateIntoMoveDirection();
             }
+            else if (currentWaypoint < waypoints.Length + 2)
+            {
+                currentWaypoint++;
+                lastWaypointSwitchTime = Time.time;
+                RotateIntoMoveDirection();
+            }
             else
             {
                 Destroy(gameObject);
@@ -54,7 +60,6 @@ public class MoveEnemy : MonoBehaviour
         float y = newDirection.y;
         float rotationAngle = Mathf.Atan2(y, x) * 180 / Mathf.PI;
         //3
-        GameObject sprite = gameObject.transform.Find("Sprite").gameObject;
-        sprite.transform.rotation = Quaternion.AngleAxis(rotationAngle, Vector3.forward);
+        Sprite.transform.rotation = Quaternion.AngleAxis(rotationAngle, Vector3.forward);
     }
 }

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7426046140825076831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.84, y: 4.3, z: -2}
-  m_LocalScale: {x: 0.16569, y: 0.16569, z: 0.16569}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,8 +71,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b56d9fa0e8bd6e409ed188db38a692c, type: 3}
-  m_Color: {r: 0.79972434, g: 1, b: 0.4198113, a: 1}
+  m_Sprite: {fileID: 8952745043420170154, guid: 680d3729739f1324cae70c5c0a5627f8,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,9 +99,9 @@ MonoBehaviour:
   - cost: 200
     visualization: {fileID: 7426046140825076831}
   - cost: 110
-    visualization: {fileID: 0}
+    visualization: {fileID: 7426046140825076831}
   - cost: 120
-    visualization: {fileID: 0}
+    visualization: {fileID: 7426046140825076831}
 --- !u!58 &2490519858248256081
 CircleCollider2D:
   m_ObjectHideFlags: 0

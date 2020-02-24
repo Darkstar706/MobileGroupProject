@@ -44,8 +44,8 @@ public class SpawnEnemy : MonoBehaviour
                 enemiesSpawned < waves[currentWave].maxEnemies)
             {
                 lastSpawnTime = Time.time;
-                GameObject newEnemy = (GameObject)
-                    Instantiate(waves[currentWave].enemyPrefab);
+                //GameObject newEnemy = (GameObject)
+                    //Instantiate(waves[currentWave].enemyPrefab);
                 //newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
                 enemiesSpawned++;
             }

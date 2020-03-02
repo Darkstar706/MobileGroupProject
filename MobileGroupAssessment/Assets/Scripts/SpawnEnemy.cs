@@ -64,12 +64,12 @@ public class SpawnEnemy : MonoBehaviour
             }
             // 5 
         }
-        else
-        {
-            gameManager.gameOver = true;
-            GameObject gameOverText = GameObject.FindGameObjectWithTag("GameWon");
-            gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
-        }
+        //else
+        //{
+            //gameManager.gameOver = true;
+            //GameObject gameOverText = GameObject.FindGameObjectWithTag("GameWon");
+            //gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
+        //}
     }
 
 }

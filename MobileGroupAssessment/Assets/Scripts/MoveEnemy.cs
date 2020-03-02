@@ -4,7 +4,7 @@ using System.Collections;
 public class MoveEnemy : MonoBehaviour
 {
 
-    [HideInInspector]
+    
     public GameObject[] waypoints;
     private int currentWaypoint = 0;
     private float lastWaypointSwitchTime;
@@ -21,8 +21,7 @@ public class MoveEnemy : MonoBehaviour
     {
         // 1 
         Vector3 startPosition = waypoints[currentWaypoint].transform.position;
-        Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position;
-        // 2 
+        Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position; 
         float pathLength = Vector2.Distance(startPosition, endPosition);
         float totalTimeForPath = pathLength / speed;
         float currentTimeOnPath = Time.time - lastWaypointSwitchTime;
@@ -30,7 +29,7 @@ public class MoveEnemy : MonoBehaviour
         // 3 
         if (gameObject.transform.position.Equals(endPosition))
         {
-            if (currentWaypoint < waypoints.Length - 2)
+            if (currentWaypoint < waypoints.Length)
             {
                 // 4 Switch to next waypoint
                 currentWaypoint++;

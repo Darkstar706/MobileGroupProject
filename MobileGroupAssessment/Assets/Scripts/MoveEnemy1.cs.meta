@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:MobileGroupAssessment/Assets/Scripts/MoveEnemy.cs.meta
-guid: 5991a43eb2b60fa4dadb7dfc6d027b07
-=======
-guid: bdd7df1e440fb0142bfd047da0c847a5
->>>>>>> 625ebfa94889cd4d0a4723f010a19fb7d772b4f5:MobileGroupAssessment/Assets/Scripts/MoveEnemy1.cs.meta
+guid: beb07d319aba06646ad8d720a01fa1b6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -42,22 +42,13 @@ public class MoveEnemy1 : MonoBehaviour
             {
                 // 5 Destroy enemy
                 Destroy(gameObject);
-
-<<<<<<< HEAD:MobileGroupAssessment/Assets/Scripts/MoveEnemy.cs
                 AudioSource audioSource = gameObject.GetComponent<AudioSource>();
                 AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
 
                 GameManagerBehavior gameManager =
                     GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
                 gameManager.Health -= 1;
-=======
-                //AudioSource audioSource = gameObject.GetComponent<AudioSource>();
-               // AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
 
-               // GameManagerBehaviour gameManager =
-                   // GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
-                //gameManager.Health -= 1;
->>>>>>> 625ebfa94889cd4d0a4723f010a19fb7d772b4f5:MobileGroupAssessment/Assets/Scripts/MoveEnemy1.cs
             }
         }
     }

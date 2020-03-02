@@ -12,22 +12,18 @@ public class PauseMenu : MonoBehaviour
         GetComponent<Canvas>().enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Pause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(Time.timeScale == 1)
+        if(Time.timeScale == 1)
             {
-                GetComponent<Canvas>().enabled = true;
-                Time.timeScale = 0;
+            GetComponent<Canvas>().enabled = true;
+            Time.timeScale = 0;
             }
             else
             {
-                GetComponent<Canvas>().enabled = false;
-                Time.timeScale = 1;
+            GetComponent<Canvas>().enabled = false;
+            Time.timeScale = 1;
             }
-        }
     }
     public void LoadMainMenu()
     {

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7426046140825076831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.84, y: 4.3, z: -2}
-  m_LocalScale: {x: 0.16569, y: 0.16569, z: 0.16569}
+  m_LocalScale: {x: 3, y: 3, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,8 +71,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b56d9fa0e8bd6e409ed188db38a692c, type: 3}
-  m_Color: {r: 0.79972434, g: 1, b: 0.4198113, a: 1}
+  m_Sprite: {fileID: 8952745043420170154, guid: 680d3729739f1324cae70c5c0a5627f8,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,11 +97,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - cost: 200
-    visualization: {fileID: 7426046140825076831}
+    visualization: {fileID: 6181683568423621426, guid: 471248d1187c09f4dbfd749b42277fe1,
+      type: 3}
   - cost: 110
-    visualization: {fileID: 0}
+    visualization: {fileID: 4026702954768186539, guid: 30582cbd4529efb4ea34f4700846a687,
+      type: 3}
   - cost: 120
-    visualization: {fileID: 0}
+    visualization: {fileID: 2416025292413164612, guid: e8466d5416092874b9000a8170de430a,
+      type: 3}
 --- !u!58 &2490519858248256081
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,4 +120,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 0.57796365
